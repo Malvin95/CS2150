@@ -36,17 +36,15 @@ public class ShapeDesigner extends AbstractDesigner {
 	/** Draw the shape **/
     protected void drawUnitShape()
     {
-    	Vertex v1 = new Vertex(0f,0f,2f);
-		Vertex v2 = new Vertex(0f,1f,2f);
-		Vertex v3 = new Vertex(1f,1f,2f);
-		Vertex v4 = new Vertex(1f,0f,2f);
-		
-		
+    	Vertex v1 = new Vertex(0.0f,0.0f,2.0f);
+		Vertex v2 = new Vertex(0.0f,1.0f,2.0f);
+		Vertex v3 = new Vertex(1.0f,1.0f,2.0f);
+		Vertex v4 = new Vertex(1.0f,0.0f,2.0f);	
 		Vertex v5 = new Vertex(0.0f, 0.0f, 0.0f);
 		Vertex v6 = new Vertex(0.0f, 1.0f, 0.0f);
 		Vertex v7 = new Vertex(1.0f, 1.0f, 0.0f);
 		Vertex v8 = new Vertex(1.0f, 0.0f, 0.0f);
-		
+	
 		Vertex v9 = new Vertex(0.25f, 0.25f, 2.5f);
 		Vertex v10 = new Vertex(0.25f, 0.75f, 2.5f);
 		Vertex v11 = new Vertex(0.75f, 0.75f, 2.5f);
@@ -68,37 +66,32 @@ public class ShapeDesigner extends AbstractDesigner {
 		
 		GL11.glBegin(GL11.GL_POINTS);
 		
-			v1.submit();
-			v2.submit();
-			v3.submit();
-			v4.submit();
-
-			GL11.glEnd();
-			
-			
-			v5.submit();
-			v6.submit();
-			v7.submit();
-			v8.submit();
+		v1.submit();
+		v2.submit();
+		v3.submit();
+		v4.submit();	
+		v5.submit();
+		v6.submit();
+		v7.submit();
+		v8.submit();
 		
-			
-			v9.submit();
-			v10.submit();
-			v11.submit();
-			v12.submit();
-			v13.submit();
-			v14.submit();
-			v15.submit();
-			v16.submit();
-			
-			v17.submit();
-			v18.submit();
-			v19.submit();
-			v20.submit();
-			v21.submit();
-			v22.submit();
-			v23.submit();
-			v24.submit();
+		v9.submit();
+		v10.submit();
+		v11.submit();
+		v12.submit();
+		v13.submit();
+		v14.submit();
+		v15.submit();
+		v16.submit();
+		
+		v17.submit();
+		v18.submit();
+		v19.submit();
+		v20.submit();
+		v21.submit();
+		v22.submit();
+		v23.submit();
+		v24.submit();
 		
 		GL11.glEnd();
 		
@@ -107,32 +100,32 @@ public class ShapeDesigner extends AbstractDesigner {
         	submitNextColour();
 			//Near face
 			
-            v4.submit();
-            v3.submit();
-            v2.submit();
-            v1.submit();
+           	v4.submit();
+	    	v3.submit();
+           	v2.submit();
+           	v1.submit();
         }
-        GL11.glEnd();
+       	GL11.glEnd();
         
         GL11.glBegin(GL11.GL_POLYGON);
         {
         	submitNextColour();
         	//Far face
-        	
+        
         	v5.submit();
-            v6.submit();
-            v7.submit();
-            v8.submit();
+	    	v6.submit();
+	    	v7.submit();
+	    	v8.submit();
         }
         GL11.glEnd();
         
-        GL11.glBegin(GL11.GL_POLYGON);
+	    GL11.glBegin(GL11.GL_POLYGON);
         {
         	submitNextColour();
-            //Top face
+        	//Top face
 
-            v7.submit();
-            v6.submit();
+	        v7.submit();
+        	v6.submit();
             v2.submit();
             v3.submit();
         }
