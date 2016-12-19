@@ -36,12 +36,12 @@ public class ShapeDesigner extends AbstractDesigner {
 	/** Draw the shape **/
     protected void drawUnitShape()
     {
-    	Vertex v1 = new Vertex(-0.5f, 0.0f, 1.0f);
-		Vertex v2 = new Vertex(0.5f, 0.0f, 1.0f);
-		Vertex v3 = new Vertex(0.5f, 0.0f, -1.0f);
-		Vertex v4 = new Vertex(-0.5f, 0.0f, -1.0f);
+    	Vertex v1 = new Vertex(0f,0f,2f);
+		Vertex v2 = new Vertex(0f,1f,2f);
+		Vertex v3 = new Vertex(1f,1f,2f);
+		Vertex v4 = new Vertex(1f,0f,2f);
 		
-		/*
+		
 		Vertex v5 = new Vertex(0.0f, 0.0f, 0.0f);
 		Vertex v6 = new Vertex(0.0f, 1.0f, 0.0f);
 		Vertex v7 = new Vertex(1.0f, 1.0f, 0.0f);
@@ -64,7 +64,7 @@ public class ShapeDesigner extends AbstractDesigner {
 		Vertex v22 = new Vertex(0.375f, 0.625f, 2.5f);
 		Vertex v23 = new Vertex(0.625f, 0.625f, 2.5f);
 		Vertex v24 = new Vertex(0.625f, 0.375f, 2.5f);
-		*/
+		
 		
 		GL11.glBegin(GL11.GL_POINTS);
 		
@@ -75,11 +75,12 @@ public class ShapeDesigner extends AbstractDesigner {
 
 			GL11.glEnd();
 			
-			/*
+			
 			v5.submit();
 			v6.submit();
 			v7.submit();
 			v8.submit();
+		
 			
 			v9.submit();
 			v10.submit();
@@ -176,7 +177,7 @@ public class ShapeDesigner extends AbstractDesigner {
         /*
          * 
          * LARGER LENS PIECE
-         * 
+         */
         GL11.glBegin(GL11.GL_POLYGON);
         {
         	submitNextColour();
@@ -252,7 +253,7 @@ public class ShapeDesigner extends AbstractDesigner {
         /*
          * 
          * SMALLER LENS PIECE
-         * 
+         */
         GL11.glBegin(GL11.GL_POLYGON);
         {
         	submitNextColour();
@@ -324,7 +325,6 @@ public class ShapeDesigner extends AbstractDesigner {
             v20.submit();
         }
         GL11.glEnd(); 
-        */
         
     }
 }
